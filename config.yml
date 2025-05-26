@@ -1,0 +1,17 @@
+genome: hg38
+refgenie_config: "./.refgenie.yaml"
+data_dir: "/mnt/f/HBV/RBP/Transcriptome/data"
+tx2gene_file: "tx2gene.tsv"
+threads: 8
+
+projects:
+  PRJNA543067:
+    - sample: SRR9058988
+      group: Negative
+    - sample: SRR9058989
+      group: Positive
+  PRJNA726192:
+    - sample: SRR14360171
+      group: Negative
+    - sample: SRR14360174
+      group: Positive

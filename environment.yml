@@ -1,0 +1,28 @@
+name: transcriptome_analysis
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - salmon=1.2.1
+  - trim-galore=0.6.10
+  - cutadapt=5.0
+  - fastqc=0.11.5
+  - sra-tools=3.2.1
+  - gffread
+  - yq
+  - r-base=4.4.3
+  - r-deseq2
+  - r-tximport
+  - r-apeglm
+  - r-biomart
+  - r-readr
+  - r-ensembldb
+  - r-annotationdbi
+  - r-genomicfeatures
+  - r-summarizedexperiment
+  - r-biobase
+  - refgenie=0.12.1
+  - refgenconf=0.12.2
+  - yacman
+  - attmap
+  - pyyaml
