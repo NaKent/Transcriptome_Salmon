@@ -1,12 +1,14 @@
 トランスクリプトーム解析パイプライン
 ===============================
 
-このパイプラインは、SRA から RNA-Seq データを処理し、群間（例：Positive vs Negative）での差次的遺伝子発現（DEG）解析を自動で行います。
+SRA から RNA-Seq データをダウンロードし、群間（例：Positive vs Negative）での差次的遺伝子発現（DEG）解析を自動で行います。
+
+個人の環境によって修正が必要な場合があるかと思いますので、Issuesかslackにてお尋ねください。
 
 主な処理手順：
 ---------------
-1. SRA ID に基づく FASTQ データのダウンロード
-2. trim_galore + FastQC によるクオリティトリミング
+1. 指定した SRA ID の FASTQ データをダウンロード
+2. trim_galore によるクオリティコントロール
 3. Salmon による発現定量
 4. R（tximport + DESeq2）によるDEG解析
 5. 結果出力：遺伝子名付きのDEGリスト、正規化済み発現量マトリクス
@@ -30,6 +32,14 @@
 2. パイプラインの実行：
 
    bash run_analysis.sh
+
+ダウンロード：
+---------------
+方法 1.
+git clone https://github.com/NaKent/Transcriptome_Salmon.git
+
+方法 2.
+緑色のCodeボタンから、Download ZIP
 
 出力ファイル：
 ---------------
